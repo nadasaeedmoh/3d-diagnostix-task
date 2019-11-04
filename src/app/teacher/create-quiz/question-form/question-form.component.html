@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Question</h4>
+    <button class="float-right closebtn" type="button" class="close" aria-label="Close" (click)="dismissModal()" >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="questionForm">
+      <div *ngIf="openState==='edit'" class="form-group">
+        <label for="id">ID</label>
+        <input type="number" class="form-control" id="id" formControlName="id" aria-describedby="emailHelp" readonly>
+      </div>
+      <div class="form-group">
+        <label for="title">Question title*</label>
+        <input type="text" class="form-control" id="title" formControlName="title" aria-describedby="emailHelp" placeholder="Enter question title">
+        <small  *ngIf="questionForm.get('title').hasError('required') && (questionForm.get('title').dirty || questionForm.get('title').touched)"  class="form-text text-danger">Field is required.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="possAns1">option 1*</label>
+        <input type="text" class="form-control" formControlName="possibleAnsOne" id="possAns1" placeholder="Possible Answer">
+        <small  *ngIf="questionForm.get('possibleAnsOne').hasError('required') && (questionForm.get('possibleAnsOne').dirty || questionForm.get('possibleAnsOne').touched)"  class="form-text text-danger">Field is required.</small>
+      </div>
+      <div class="form-group">
+        <label for="possAns2">option 2*</label>
+        <input type="text" class="form-control" id="possAns2" formControlName="possibleAnsTwo" placeholder="Possible Answer">
+        <small  *ngIf="questionForm.get('possibleAnsTwo').hasError('required') && (questionForm.get('possibleAnsTwo').dirty || questionForm.get('possibleAnsTwo').touched)"  class="form-text text-danger">Field is required.</small>
+      </div>
+      <div class="form-group">
+        <label for="possAns3">option 3*</label>
+        <input type="text" class="form-control" formControlName="possibleAnsThree" id="possAns3" placeholder="Possible Answer">
+        <small  *ngIf="questionForm.get('possibleAnsThree').hasError('required') && (questionForm.get('possibleAnsThree').dirty || questionForm.get('possibleAnsThree').touched)"  class="form-text text-danger">Field is required.</small>
+      </div>
+      <div class="form-group">
+        <label for="possAns4">option 4</label>
+        <input type="text" class="form-control" formControlName="possibleAnsFour" id="possAns4" placeholder="Possible Answer">
+      </div>
+
+      <div class="form-group">
+        <label for="correctAns">Correct Answer*</label>
+        <input type="text" class="form-control" formControlName="correctAns" id="correctAns" placeholder="Correct Answer">
+        <small  *ngIf="questionForm.get('correctAns').hasError('required') && (questionForm.get('correctAns').dirty || questionForm.get('correctAns').touched)"  class="form-text text-danger">Field is required.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="expl">Explanation*</label>
+        <input type="text" class="form-control" formControlName="Explanation" id="expl" placeholder="Correct Answer">
+        <small  *ngIf="questionForm.get('Explanation').hasError('required') && (questionForm.get('Explanation').dirty || questionForm.get('Explanation').touched)"  class="form-text text-danger">Field is required.</small>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button *ngIf="openState==='add'" [disabled]="!questionForm.valid" type="button" class="btn btn-primary" (click)="addQuestion()">Add</button>
+    <button *ngIf="openState==='edit'" [disabled]="!questionForm.valid" type="button" class="btn btn-primary" (click)="EditQuestion()">Save</button>    
+    <button type="button" class="btn btn-danger" (click)="dismissModal()">close</button>
+
+  </div>
+</div>

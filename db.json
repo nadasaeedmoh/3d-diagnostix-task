@@ -1,0 +1,58 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "id": 1,
+      "name": "ghada",
+      "email": "ghada@teacher.com",
+      "isTeacher": 1,
+      "password": "12345"
+    },
+    {
+      "id": 1,
+      "name": "ahmed",
+      "email": "ahmed@student.com",
+      "isTeacher": 0,
+      "password": "12345"
+    }
+  ],
+  "quizs": [
+    {
+      "id": 1,
+      "quizTitle": "test quiz for published and save one in the same time",
+      "questions": [
+        {
+          "title": "test",
+          "correctAnswer": "test",
+          "possibleAnswers": [
+            "test",
+            "test",
+            "test",
+            "test"
+          ],
+          "explanation": "test",
+          "Id": 1
+        }
+      ],
+      "teacherId": null,
+      "saved": 0,
+      "published": 1
+    }
+  ]
+}

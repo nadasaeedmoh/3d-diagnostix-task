@@ -1,0 +1,21 @@
+<div *ngFor="let list of questionList;let i=index" class="card mt-1">
+  <h5 class="card-header">{{list.title}}</h5>
+  <div class="card-body">
+    <h6 class="card-title d-inline-block">Possible Answer: </h6>
+    <p class="card-text d-inline-block"> {{list.possibleAnswers}}</p>
+    <span class="d-block"></span>
+    <h6 class="card-title d-inline-block">Correct Answer: </h6>
+    <p class="card-text d-inline-block"> {{list.correctAnswer}}</p>
+    <span class="d-block"></span>
+    <h6 class="card-title d-inline-block">Explanation: </h6>
+    <p class="card-text d-inline-block"> {{list.explanation}}</p>
+    <div class="m-0">
+        <button class="btn btn-primary m-2 action"  (click)="editQuestion(list,i)">Edit</button>
+        <button class="btn btn-danger action"  (click)="deleteQuestion(list,i)">Delete</button>
+    </div>
+    
+
+    </div>
+</div>
+
+
