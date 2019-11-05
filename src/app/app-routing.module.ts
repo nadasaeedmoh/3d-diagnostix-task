@@ -4,8 +4,8 @@ import { TeacherComponent } from './teacher/teacher.component';
 import { LoginComponent } from './login/login.component';
 import { CreateQuizComponent } from './teacher/create-quiz/create-quiz.component';
 import { QuizListComponent } from './teacher/quiz-list/quiz-list.component';
-import { homedir } from 'os';
 import { HomeComponent } from './teacher/home/home.component';
+import { TeacherAuthGuardService } from './guard/teacher-auth-guard.service';
 
 const routes: Routes = [
   {path:"teacher", component: TeacherComponent , 
@@ -15,7 +15,9 @@ const routes: Routes = [
     {path:"publishedquizzes", component:CreateQuizComponent},
     {path:"home", component: HomeComponent}
 
-  ]},
+  ],
+  canActivate:[TeacherAuthGuardService]
+},
   {path: "login", component: LoginComponent},
   {path: "", component: LoginComponent},
   

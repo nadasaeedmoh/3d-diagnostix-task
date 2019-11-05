@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-quiz-list',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quiz-list.component.css']
 })
 export class QuizListComponent implements OnInit {
-
-  constructor() { }
+  state:string;
+  constructor(private route:Router) {
+   }
 
   ngOnInit() {
+    // print object
+    console.log(history.state)
   }
 
 }

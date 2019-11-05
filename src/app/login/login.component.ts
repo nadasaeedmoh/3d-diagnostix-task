@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
         this.showInValidationMess = true;
       else{
         this.showInValidationMess = false;
+        localStorage.setItem('isteacher', res[0]['isTeacher'] )
         if(res[0]['isTeacher'] === 1){
           localStorage.setItem('teacherId',res[0]['id'])
           //redirect to teacher page

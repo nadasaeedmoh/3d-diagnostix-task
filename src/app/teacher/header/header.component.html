@@ -17,8 +17,8 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" routerLink="/teacher/createquiz">Create Quiz</a>
-              <a class="dropdown-item" href="#">Saved Quizzes</a>
-              <a class="dropdown-item" href="#">Published Quizzes</a>
+              <a class="dropdown-item" routerLink="/teacher/savedquizzes" [state]="{'listState':'saved'}">Saved Quizzes</a>
+              <a class="dropdown-item" routerLink="/teacher/publishedquizzes" [state]="{'listState':'publish'}">Published Quizzes</a>
             </div>
           </li>
         </ul>
