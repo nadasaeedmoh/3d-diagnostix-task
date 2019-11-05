@@ -1,0 +1,27 @@
+input{
+    width: 50% !important;
+}
+
+td{
+    border-top: none !important;
+}
+
+tr{
+    border: 1px solid lightgrey;
+    border-radius: 1px !important;
+}
+
+.titleSection{
+    width: 70%;
+}
+
+button{
+    width: 30%;
+    margin: 2px;
+}
+
+.pag{
+    position: relative;
+    float: right;
+}
+

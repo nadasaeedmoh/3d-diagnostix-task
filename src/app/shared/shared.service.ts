@@ -60,9 +60,11 @@ export class SharedService {
   }
 
   getPublishQuiz(){
+    console.log('ser',localStorage.getItem('teacherId'))
     return new Promise((resolve,reject)=>{
-      this.http.get(this.baseUrl+'quizs?published=1')
+      this.http.get(this.baseUrl+'quizs?published=1&teacherId='+localStorage.getItem('teacherId'))
       .subscribe(res=>{
+    console.log('ser',res)
         resolve(res);
       },reject);
     });
@@ -70,18 +72,34 @@ export class SharedService {
 
   getSavedQuiz(){
     return new Promise((resolve,reject)=>{
-      this.http.get(this.baseUrl+'quizs?saved=1')
+      this.http.get(this.baseUrl+'quizs?saved=1&teacherId='+localStorage.getItem('teacherId'))
       .subscribe(res=>{
         resolve(res);
       },reject);
     });
   }
 
-  publishQuiz(){
-
+  publishQuiz(quizId,quiz){
+    return new Promise((resolve,reject)=>{
+      this.http.put(this.baseUrl+'quizs/'+quizId,quiz)
+      .subscribe(res=>{
+        resolve(res);
+      },reject)
+    })
   }
 
   saveQuiz(){
-    
+
   }
+
+  DeleteQuiz(quizId){
+    return new Promise((resolve,reject)=>{
+      this.http.delete(this.baseUrl+'quizs/'+quizId)
+      .subscribe(res=>{
+        resolve(res);
+      },reject);
+    })
+  }
+
+  
 }

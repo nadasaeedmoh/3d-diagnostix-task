@@ -10,9 +10,10 @@ import { TeacherAuthGuardService } from './guard/teacher-auth-guard.service';
 const routes: Routes = [
   {path:"teacher", component: TeacherComponent , 
   children:[
+    {path:'editQuiz/:id',component:CreateQuizComponent},
     {path:"createquiz", component:CreateQuizComponent},
     {path:"savedquizzes", component:QuizListComponent},
-    {path:"publishedquizzes", component:CreateQuizComponent},
+    {path:"publishedquizzes", component:QuizListComponent},
     {path:"home", component: HomeComponent}
 
   ],

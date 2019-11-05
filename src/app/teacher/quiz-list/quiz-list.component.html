@@ -1,3 +1,29 @@
-<p>
-  quiz-list works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-lg-12 col-md-12">
+      <!-- <form>
+        <div class="form-group form-inline text-center mt-3 mb-3">
+          <input class="form-control m-auto" type="text" name="searchTerm" [(ngModel)]="searchValue" placeholder="Search"/>
+        </div> -->
+        <table class="table table-striped mt-3">
+          <tbody>
+            <tr *ngFor="let item of listItems; let i=index">
+              <td class="titleSection">
+                Quiz: <h6>{{item.quizTitle}}</h6>
+              </td>
+              <td>
+                <button *ngIf="state==='saved'" (click)="editQuiz(item)" class="btn btn-primary">Edit</button>
+                <button *ngIf="state==='saved'" (click)="shareQuiz(item)" class="btn btn-success">Share</button>
+                <button class="btn btn-danger" (click)="deleteQuiz(item)" [ngClass]="{pag: state === 'publish'}">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- <div class="pag">
+          <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
+          </ngb-pagination>
+        </div> -->
+      <!-- </form> -->
+    </div>
+  </div>
+</div>

@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import {ReactiveFormsModule} from '@angular/forms'
+import {ReactiveFormsModule, FormsModule} from '@angular/forms'
 import { SharedService } from './shared/shared.service';
 import { HttpClientModule } from '@angular/common/http';
 import { TeacherComponent } from './teacher/teacher.component';
@@ -34,6 +34,7 @@ import { HomeComponent } from './teacher/home/home.component';
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule,
+    FormsModule
     
   ],
   providers: [SharedService],
