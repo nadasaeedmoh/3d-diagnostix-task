@@ -17,28 +17,7 @@
   ],
   "quizs": [
     {
-      "id": 4,
-      "quizTitle": "test quiz for save ",
-      "questions": [
-        {
-          "title": "test",
-          "correctAnswer": "test",
-          "possibleAnswers": [
-            "test",
-            "test",
-            "test",
-            "test"
-          ],
-          "explanation": "test",
-          "Id": 1
-        }
-      ],
-      "teacherId": 1,
-      "saved": 0,
-      "published": 1
-    },
-    {
-      "id": 6,
+      "id": 1,
       "quizTitle": "test quiz for save ",
       "questions": [
         {
@@ -59,8 +38,8 @@
       "published": 0
     },
     {
-      "id": 7,
-      "quizTitle": "test quiz for save ",
+      "id": 2,
+      "quizTitle": "test quiz for publish ",
       "questions": [
         {
           "title": "test",
@@ -73,53 +52,35 @@
           ],
           "explanation": "test",
           "Id": 1
-        }
-      ],
-      "teacherId": 1,
-      "saved": 1,
-      "published": 0
-    },
-    {
-      "id": 8,
-      "quizTitle": "test quiz for save ",
-      "questions": [
+        },
         {
-          "title": "test",
-          "correctAnswer": "test",
+          "title": "p",
+          "correctAnswer": "p",
           "possibleAnswers": [
-            "test",
-            "test",
-            "test",
-            "test"
+            "p",
+            "p",
+            "p",
+            "p"
           ],
-          "explanation": "test",
-          "Id": 1
-        }
-      ],
-      "teacherId": 1,
-      "saved": 0,
-      "published": 1
-    },
-    {
-      "id": 5,
-      "quizTitle": "u",
-      "questions": [
+          "explanation": "p",
+          "Id": 2
+        },
         {
-          "title": "otti",
+          "title": "ott",
           "correctAnswer": "o",
           "possibleAnswers": [
             "o",
             "o",
-            "oo",
+            "o",
             "o"
           ],
           "explanation": "o",
-          "Id": 1
+          "Id": 3
         }
       ],
       "teacherId": 1,
-      "saved": 1,
-      "published": 0
+      "saved": 0,
+      "published": 1
     }
   ]
 }

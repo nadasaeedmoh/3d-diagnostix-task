@@ -49,13 +49,7 @@ detectEdit;
         this.sendeditQuestion.emit(res);
         this.detectEdit = res;
         this.questionList[i]= new Question(res.id, res.title, [res.possibleAnsOne, res.possibleAnsTwo, res.possibleAnsThree, res.possibleAnsFour], res.correctAns, res.Explanation);
-        // this.questionList.find((ele,i)=>{
-        //   if(ele['id'] === res.id){
-        //     this.questionList[i]= new Question(res.id, res.title, [res.possibleAnsOne, res.possibleAnsTwo, res.possibleAnsThree, res.possibleAnsFour], res.correctAns, res.Explanation)
-        //     this.questionList = [].concat(this.questionList)
-        //     return true;
-        //   }
-        // })
+       
         
       }
     })
@@ -64,12 +58,7 @@ detectEdit;
   deleteQuestion(list,i){
     this.detectDeleted.emit(list);
     this.questionList.splice(i,1)
-    // this.questionList.find((ele,i)=>{
-    //   if(ele['Id'] === list['id']){
-    //     this.questionList.splice(i,1);
-    //     return true;
-    //   }
-    // })
+    
   }
 
 

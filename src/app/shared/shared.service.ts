@@ -2,15 +2,28 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { LoginComponent } from '../login/login.component';
 import { resolve, reject } from 'q';
-import { Subject } from 'rxjs';
+import { Subject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SharedService {
+  question = new Subject();
   baseUrl:string = "http://localhost:3000/";
   constructor(private http:HttpClient) { 
     
+  }
+
+  getQuestion():Observable<any>{
+    return this.question.asObservable();
+  }
+
+  setQuestion(ques){
+    this.question.next(ques);
+  }
+
+  clearQuestion(){
+    this.question.next();
   }
 
   login(loginValue){

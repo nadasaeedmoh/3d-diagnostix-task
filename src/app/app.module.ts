@@ -15,6 +15,8 @@ import {NgbModule, NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
 import { QuestionListComponent } from './teacher/create-quiz/question-list/question-list.component';
 import { QuizListComponent } from './teacher/quiz-list/quiz-list.component';
 import { HomeComponent } from './teacher/home/home.component';
+import { EditQuizComponent } from './teacher/edit-quiz/edit-quiz.component';
+import { ListComponent } from './teacher/edit-quiz/list/list.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { HomeComponent } from './teacher/home/home.component';
     QuestionFormComponent,
     QuestionListComponent,
     QuizListComponent,
-    HomeComponent
+    HomeComponent,
+    EditQuizComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

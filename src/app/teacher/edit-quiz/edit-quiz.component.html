@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row btnCont mt-2 mr-auto ml-auto rounded-pill p-1">
+      <div class="col-sm-3 col-md-3 col-lg-3 mr-0 text-center ">
+        <button class="btn" data-toggle="tooltip" data-placement="top" title="Add Question" (click)="addQuestion()">
+          <img src="../../../assets/images/add.png"   width="40" height="40" alt="add question">
+        </button>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3 mr-0 text-center">
+        <button class="btn" data-toggle="tooltip" (click)="actionToQuiz('save')" data-placement="top" title="Save">
+          <img src="../../../assets/images/save.png"  width="40" height="40" alt="save">      
+        </button>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3 mr-0 text-center">
+        <button class="btn" data-toggle="tooltip" (click)="actionToQuiz('publish')" data-placement="top" title="Publish">
+          <img src="../../../assets/images/publish.png" width="40" height="40" alt="publish">
+        </button>
+      </div>
+      <div class="col-sm- col-md-3 col-lg-3 mr-0 text-center"  >
+        <button class="btn" data-toggle="tooltip" (click)="Exit()" data-placement="top" title="Exit">
+          <img src="../../../assets/images/exit.png"  width="40" height="40" alt="exist">      
+        </button>
+      </div>
+    </div>
+    <div class="row ques mt-2">
+      <div class=" col-md-12 col-lg-12  col-sm-12 mr-auto ml-auto">
+        <form [formGroup]="EditQuizTitle" >
+          <div class="form-group">
+            <input type="text" class="form-control rounded-pill" id="quiztitle" formControlName="quizTitle" aria-describedby="emailHelp" placeholder="Enter quiz title">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row mt-5 ">
+      <div class="col-md-12 col-sm-12 col-lg-12 ">
+        <!-- <app-list [editQuizQuest]="sendQuestToList" (sendeditQuestion)="getEditQues($event)"(detectDeleted)="getDeletedQues($event)" ></app-list> -->
+        <app-list></app-list>
+      </div>
+    </div>
+  </div>
+  
